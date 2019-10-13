@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link href="http://i2.wp.com/www.codebycody.com/wp-content/uploads/2016/03/blog-covers-dynamic-approver-1.png?fit=1080%2C468"  rel="icon">
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css"/>
+<style>
+
+
+  html {
+	scroll-behavior: smooth;
+}
+/* .white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 25px;
+  width: auto;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.mfp-move-from-top .mfp-content {
+  vertical-align: top;
+}
+.mfp-move-from-top .mfp-with-anim {
+  opacity: 0;
+  transition: all 0.2s;
+  transform: translateY(-100px);
+}
+.mfp-move-from-top.mfp-bg {
+  opacity: 0;
+  transition: all 0.2s;
+}
+.mfp-move-from-top.mfp-ready .mfp-with-anim {
+  opacity: 1;
+  transform: translateY(0);
+}
+.mfp-move-from-top.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+.mfp-move-from-top.mfp-removing .mfp-with-anim {
+  transform: translateY(-50px);
+  opacity: 0;
+}
+.mfp-move-from-top.mfp-removing.mfp-bg {
+  opacity: 0;
+} */
+.placeholder { background:#0C1E7F;opacity: 1;}
+body, html { font-family:cursive;}
+*{box-sizing: border-box;}
+.firstUl ul { list-style-type: none; margin-left: -40px; text-align: center; margin-top: 20px;} 
+.firstUl ul li { padding: 10px;  } .firstUl ul li:hover { background: rgb(59, 87, 50);}
+.firstUl ul li a { color: white; text-decoration: none; display: block; text-transform: uppercase;font-family:cursive; font-size: 22px;}
+.firstUl { height:100%;width: 20%;background: rgb(104, 116, 87);float:left;position:fixed;}
+.top { display: block !important; animation-name: abc; animation-duration: 5s;}
+@keyframes abc { from{opacity:0} to {opacity: 1}}
+
+#xyz ul { list-style-type: none; padding: 0px} 
+#xyz ul li { background: yellow; padding: 10px; margin: 4px; border-radius: 5px; animation-name: xyz; animation-duration: 1s;}
+@keyframes xyz { from{opacity: 0} to {opacity: 1}}
+#xyz input[type='text']{ width: 450px; border-radius: 5px;padding:10px;border: 0px;outline: 0px;}
+#xyz button[type="button"] {
+   border-radius: 5px;
+    color: white;
+    background: green;
+    padding: 10px;
+    border: 0px;
+    outline: 0px;
+    width: 60px;}
+  #spann { cursor: pointer;}
+  table { border: 1px solid #e46a74; border-radius: 5px;margin: 10px auto; background: #d8e8d7;}
+tr:nth-child(odd) td { padding: 5px; font-size: 20px; color: #19790f;background:#acc3aa;}
+tr:nth-child(even) td { padding: 5px; font-size: 20px; color: #19790f;background:#d8e8d7;}
+tr th { padding: 10px;font-size: 20px; color: #0C1E7F;}
+/*drag drop */
+
+#dragabble li { width: 200px; background: #67672a; list-style-type: none;padding: 5px;margin: 2px;cursor: move; text-transform: uppercase; font-size: 20px;color: white; float: left;height: 100px;text-align: center;line-height: 100px; border-radius:5px;}
+#dropabble li { width: 100%; background: #6f6564; list-style-type: none;padding: 5px;margin: 2px;text-transform: uppercase; font-size: 20px;color: white; border-radius:5px;}
+#dragabble li:hover { background: #83a983;}
+#dropabble li:hover { background: #83a983;}
+
+/* Tabs */
+
+#tabss ul { padding:0px;margin:0px; }
+#tabss ul li { list-style-type: none; display: inline-block;background: rgb(84, 78, 175);margin-left:1px;padding:10px;border-top-left-radius: 5px;border-top-right-radius: 5px;}
+#tabss ul li a { text-decoration:none; color: rgb(255, 255, 255); display: block; font-size: 20px;}
+#tabs-1 { padding: 10px;background:#65676d;margin-left: 1px;color: white;animation-name: tabs; animation-duration: 1s;}
+#tabs-2 { padding: 10px;background:#65676d;margin-left: 1px;color: white;animation-name: tabs; animation-duration: 1s;}
+#tabs-3 { padding: 10px;background:#65676d;margin-left: 1px;color: white;animation-name: tabs; animation-duration: 1s;}
+#tabss .active { background: #65676d} @keyframes tabs { from { opacity: 0} to {opacity: 1}}
+ul#sortable { list-style-type: none;}
+ul#sortable li { height: 50px; background:#9baf97;border: 1px solid #6f3434;line-height:50px;text-align: center;font-size: 30px;color: #6f3434;cursor: pointer;} 
+ul#selectable { list-style-type: none;}
+ul#selectable .ui-selectee { height: 50px; background:#9baf97;border: 1px solid #6f3434;line-height:50px;text-align: center;font-size: 30px;color: #6f3434;cursor: pointer;}
+ul#selectable .ui-selected{ background: red; color:white;}
+#resizable { padding:20px; background: yellow; height: 200px; width: 200px; border: 1px solid black;font-size: 30px; }
+</style>
+</head>
+<body>
+<!-- <a href="#test-popup" id="lightboxMoveFromTop" data-effect="mfp-move-from-top">Move from top</a><br>
+  
+<a id="lightboxMoveFromTopImage" href="http://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Prasat_Sikhoraphum_-_Sikhoraphum_edit1.jpg/800px-Prasat_Sikhoraphum_-_Sikhoraphum_edit1.jpg" data-effect="mfp-move-from-top">Move from top Image</a>
+
+<div id="test-popup" class="white-popup mfp-with-anim mfp-hide">You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.</div> -->
+
+<div class="firstUl" >
+<ul> 
+    <li><a href="#abc" >Carousel</a></li>
+  <li><a href="#xyz" >To do list</a></li>
+  <li><a href="#abcd">Show Password</a></li>
+  <li><a href="#filter">Filter Text</a></li>
+  <li><a href="#dragDrop">Drag and Drop</a></li>
+  <li><a href="#Tabs">Tabs</a></li>
+  <li><a href="#Sortable" >Sortable</a></li>
+  <li><a href="#Selectable" >Selectable</a></li>
+  <li><a href="#Resizable">Resizable</a></li>
+  <!-- <li><a href="#StyleSwitcher">Style Switcher</a></li> -->
+  </ul>
+</div>
+<div style="height: 100%;background: rgb(19, 18, 18);float:right;width:80%;" id="abc">
+    <div class="abc" style="">
+        <div style="display:none;width:100%" class='top'>
+          <img src="https://shrmpro.com/wp-content/uploads/2019/06/payroll01.png" style="width: 100%">
+        </div>
+        <div style="width: 100%;display:none;">
+          <img src="http://i2.wp.com/www.codebycody.com/wp-content/uploads/2016/03/blog-covers-dynamic-approver-1.png?fit=1080%2C468" style="width: 100%" >
+         </div>
+        <div style="width: 100%;display:none;">
+          <img src="https://images.squarespace-cdn.com/content/v1/53298931e4b025b2a07ecaba/1508778889387-MD62CHIIJ30UNKKWD2DJ/ke17ZwdGBToddI8pDm48kMOwR2FevcxAjoyCptWFrnAUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcQINDlqG18oPajFpNxAHKGd9zTURRK7Jow7xIVOc3Zoaj5vcuoLCYYAAuzPfidJEM/Shop-Slideshow-01.jpg?format=2500w" style="width: 100%">
+        </div>
+      </div>
+  </div>
+<div style="height: 100%;background: rgb(173, 176, 218);float:right;width:80%;padding: 20px;" id="xyz">
+  
+  <div style="width: 50%;margin: auto;">
+      <h1>To Do List</h1>
+      <input type="text" placeholder="enter" id="inputText">
+      <button type="button" id="btn">Add</button>
+      <ul id="appendList">
+        <li>Go to gym  <i style="float: right" id="spann" class="fa fa-trash"></i> </li>
+        <li>Go to school  <i style="float: right" id="spann" class="fa fa-trash"></i> </li>
+        <li>Go to market  <i style="float: right" id="spann" class="fa fa-trash"></i> </li>
+        <li>Go to class  <i style="float: right" id="spann" class="fa fa-trash"></i> </li>
+        <li>Go to swimm  <i style="float: right" id="spann" class="fa fa-trash"></i> </li>
+        <li>Go to gym  <i style="float: right" id="spann" class="fa fa-trash"></i> </li>
+        <li>Go to gym  <i style="float: right" id="spann" class="fa fa-trash"></i> </li>
+        <li>Go to gym  <i style="float: right" id="spann" class="fa fa-trash"></i> </li>
+        <li>Go to hotel <i style="float: right" id="spann" class="fa fa-trash"></i> </li>
+      </ul>
+  </div>
+</div>
+<div style="height:100%;width:80%;background: rgb(122, 175, 98);float:right" id="abcd">
+  <div style="width: 50%;margin: 40px auto;padding:20px;border: 1px solid rgb(32, 32, 32);background: rgb(177, 165, 165);border-radius: 5px;">
+    <h1>Show/Hide Password</h1>
+   <form>
+     <div style="padding:10px;">
+        <label>User Name:</label><input style="width: 300px;padding:5px;border-radius:5px;border:none;margin:0px 10px;" type="text" placeholder="Enter user name" id="UserName">
+        <p style="padding-top: 10px;margin-left: 100px; display:none;color:red" id="uservalild">Atleast 8 characters</p>
+     </div>
+   <div style="padding:10px;">
+      <label>Password:</label><input style="width: 300px;padding:5px;border-radius:5px;border:none;margin:0px 10px;" type="password" placeholder="Enter password" id="password"><button type="button" style="padding: 10px;background: rgb(25, 26, 25);border-radius:5px;border:none;color:white" id="show"> Hide </button>
+      <p style="padding-top: 10px;margin-left: 100px;display: none; color: red;" id="passwordValid">Atleast 8 characters</p>
+   </div>
+    <div style="padding: 10px">
+        <button type="submit" style="padding: 10px;background: rgb(25, 26, 25);border-radius:5px;border:none;color:white">Submit</button>
+        <button type="reset" value="Reset" style="padding: 10px;background: rgb(25, 26, 25);border-radius:5px;border:none;color:white">Reset</button>
+    </div>
+    
+  </form>
+  </div>
+</div>
+<div style="height:100%;width:80%;background: #e46a74;float:right" id="filter">
+  
+    <div style="margin: 10px auto; text-align: center;">
+        <h1>Enter text to filter from table</h1>  
+        <input type="text" placeholder="Search" style="margin: auto;width: 500px; border: 2px solid #b6bce2; padding: 10px;border-radius: 5px; font-size: 18px;" id="filterText" maxlength="20"> 
+        <table border="1" >
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Employee Code</th>
+              <th>Salary</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>Alex</td>
+                <td>Philips</td>
+                <td>0001</td>
+                <td>10000</td>
+            </tr>
+            <tr>
+                <td>Shawn</td>
+                <td>Michael</td>
+                <td>0002</td>
+                <td>20000</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Cena</td>
+                <td>0003</td>
+                <td>30000</td>
+            </tr>
+            <tr>
+                <td>Morris</td>
+                <td>Mano</td>
+                <td>0004</td>
+                <td>40000</td>
+            </tr>
+            
+          </tbody>
+          <!-- <tfoot>
+            <tr>
+              <th>col 1 head</th>
+              <th>col 2 head</th>
+              <th>col 3 head</th>
+              <th>col 4 head</th>
+            </tr>
+          </tfoot> -->
+        </table>
+    </div>
+</div>
+<div id="toTop" type="button" style="position: fixed;bottom:10px; right: 10px; height: 50px; width: 50px; text-align: center;line-height: 50px;background:rgb(129, 33, 33);border-radius: 5px; cursor: pointer"><i class="fa fa-chevron-up" style="color:white;font-size:20px;"></i></div>
+<div style="height:100%;width:80%;background: #bab0cc;float:right;" id="dragDrop">
+  <div style="margin: auto;width: 100%;text-align: center;">
+  <h1>Drag and drop the items to the shopping cart</h1>
+  <div id="dragabble" style="float: left; width: 65%">
+    <ul>
+      <li class="item">item 1</li>
+      <li class="item">item 2 </li>
+      <li class="item">item 3</li>
+      <li class="item">item 4</li>
+      <li class="item">item 5</li>
+      <li class="item">item 6</li>
+      <li class="item">item 7 </li>
+      <li class="item">item 8</li>
+      <li class="item">item 9</li>
+      <li class="item">item 10</li>
+      <li class="item">item 11</li>
+      <li class="item">item 12 </li>
+      <li class="item">item 13</li>
+      <li class="item">item 14</li>
+      <li class="item">item 15</li>
+      </ul>
+  </div>
+  <div id="dropabble" style="float: left;width:33%;background:#8a7b7b;height: 100%;margin: 5px;padding:20px;min-height: 500px;border-radius: 10px;">
+    <p style="font-size:20px;color:#115a14;text-align: left;">Shopping Cart</p>
+  </div>
+  </div>
+</div>
+<div style="height:100%;width:80%;background: #b9b4b4;float:right;padding: 20px;" id="Tabs">
+    <div id="tabss" >
+        <h1>Tabs</h1>
+        <ul>
+          <li class="active"><a href="#tabs-1">Nunc tincidunt</a></li>
+          <li><a href="#tabs-2">Proin dolor</a></li>
+          <li><a href="#tabs-3">Aenean lacinia</a></li>
+          <li><a href="#tabs-1">Nunc tincidunt</a></li>
+          <li><a href="#tabs-2">Proin dolor</a></li>
+          <li><a href="#tabs-3">Aenean lacinia</a></li>
+          <li><a href="#tabs-1">Nunc tinciduw</a></li>
+        </ul>
+        <div>
+          <div id="tabs-1" class="tab">
+            <h1>Tab 1</h1>
+            <p>You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.</p>
+          </div>
+          <div id="tabs-2" class="tab">
+              <h1>Tab 2</h1>
+              <p>You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.</p>
+          </div>
+          <div id="tabs-3" class="tab">
+              <h1>Tab 3</h1>
+              <p>You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.</p>
+          </div>
+        </div>
+        
+      </div>
+</div>
+<div  style="height:100%;width:80%;background: #c48b8b;float:right;padding: 20px;" id="Sortable">
+    <h1>Drag and Drop items upon one another to change the order</h1>
+  <div>
+    <ul id="sortable">
+      <li data-value="weekday">Item 1</li>
+      <li data-value="weekday">Item 2</li>
+      <li data-value="weekday">Item 3</li>
+      <li data-value="weekday">Item 4</li>
+      <li data-value="weekday">Item 5</li>
+      <li data-value="weekday">Item 6</li>
+    </ul>
+  </div>
+</div>
+<div  style="height:100%;width:80%;background: #96bac0;float:right;padding: 20px;" id="Selectable">
+    <h1>Select the multiple items holding control key</h1>
+  <div>
+    <ul id="selectable">
+      <li data-value="weekday">Item 1</li>
+      <li data-value="weekday">Item 2</li>
+      <li data-value="weekday">Item 3</li>
+      <li data-value="weekday">Item 4</li>
+      <li data-value="weekday">Item 5</li>
+      <li data-value="weekday">Item 6</li>
+    </ul>
+  </div>
+</div>
+<div  style="height:100%;width:80%;background: #c48b8b;float:right;padding: 20px 20px 100px 20px;" id="Resizable">
+    <h1>Drag the bottom right edge of div to resize</h1>
+  <div id="resizable">
+    resizable
+  </div>
+</div>
+<!-- <div  style="height:100%;width:80%;background: hsl(24, 57%, 56%);float:right;padding: 20px;" id="StyleSwitcher">
+    <h1>Drag and Drop items upon one another to change the StyleSwitcher</h1>
+  <div>
+   <div id="red"></div>
+  </div>
+</div> -->
+</body>
+ <script>
+// Image popups
+// $('#lightboxMoveFromTopImage').magnificPopup({
+//     type: 'image',
+//     removalDelay: 500, //delay removal by X to allow out-animation
+//     callbacks: {
+//         beforeOpen: function() {
+//             // just a hack that adds mfp-anim class to markup 
+//             this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+//             this.st.mainClass = this.st.el.attr('data-effect');
+//         }
+//     },
+// 	preloader: true,
+//     closeOnContentClick: true,
+//     midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+// });
+$(document).ready(function(){
+  //$(".container").children().css("background", "black");
+  //carousel
+  $(".abc div:first").addClass('top');
+  function add(e){
+    var curr = $(".abc div.top");
+    var next = curr.next();
+    if(!next.length){
+      next = $(".abc div:first");
+      next.addClass('top');
+      curr.removeClass('top');
+    } else { 
+      next.addClass("top");
+      curr.removeClass("top");
+    }
+    
+  }
+  setInterval(add, 5000);
+  //To do list
+  $("#btn").click(function(){
+    var t = $("#inputText").val();
+    if(t=="") { alert("Enter text")} else{
+      $("#appendList").append("<li>"+t+"<i style='float: right' id='spann' class='fa fa-trash'></i></li>");
+    var t = $("#inputText").val("");
+    }
+
+  })
+
+  $("#appendList").on("click", "i",  function(){
+    $(this).parent().remove();
+   // alert("riweriwrueiwo");
+  })
+
+  //show/hide password
+$("#show").on("click",function(){
+  var a = $("#show").text();// alert(a);
+  if(a=="Show"){
+    $("#show").text("Hide");
+    $("input:text").attr("type", "password");
+  }
+  else{
+    $("#show").text("Show");
+    $("input:password").attr("type", "text");
+  }
+  
+});
+
+$("#UserName").focus(function(){
+  $("#uservalild").css("display", "block");
+})
+
+$("#password").focus(function(){
+  $("#passwordValid").css("display","block");
+})
+
+$("#UserName").keyup(function(){
+  var t = $("#UserName").val().length;
+  if(t<8){
+    $("#uservalild").css("display", "block");
+  } else {
+    $("#uservalild").css("display", "none");
+  }
+    if(t==0){
+      $("#uservalild").css("display", "block");
+    }
+  
+})
+
+$("#password").keyup(function(){
+  var t = $("#password").val().length;
+  if(t<8){
+    $("#passwordValid").css("display", "block");
+  } else {
+    $("#passwordValid").css("display", "none");
+  }
+    if(t==0){
+      $("#passwordValid").css("display", "none");
+    }
+  
+})
+
+//toggle active class
+$(".firstUl ul li").on("click", function(){
+  $(".firstUl ul li").siblings().css("background","");
+  $(this).css({"background": "black", "color": "red"});
+  
+})
+
+//scroll to top
+$("#toTop").click( function(){
+  $('body,html').animate({
+        scrollTop: 0
+    }, 10);
+})
+
+//FILTER TEXT
+$("#filterText").on("keyup", function(){
+  var value = $(this).val().toLowerCase();
+  $("tbody tr").filter(function(){
+    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+  })
+})
+
+//Drag and drop
+$("#dragabble li").draggable({containment:'document', revert:true, opacity: 0.5,
+   start: function(){
+      t = $(this).text(); console.log(t);
+  }
+  });
+
+    $("#dropabble").droppable({hoverClass:'border', accept:'#dragabble li', drop: function()
+    {
+      $("#dropabble").append("<li style='float:left;width:100%;text-align: left;'>"+ t +"<span class='fa fa-trash' style='float: right;margin: 5px;'></span> </li>");
+      }
+    });
+
+    $("#dropabble").on("click", "span", function(){
+      $(this).parent().remove();
+    });
+
+  // Tabs
+  $(".tab").hide(); $(".tab").first().show();
+var ra = $('#tabss');
+ra.find('a').on("click", function(e){
+   e.preventDefault();
+  $(this.hash).show().siblings().hide();
+  $("#tabss li").removeClass("active");
+  $(this).parent().animate({opacity:0.3},0).addClass("active").animate({opacity:1},500);
+})
+//sortable
+$("#sortable").sortable({axis: "y", placeholder:"placeholder", opacity:0.5});
+
+})
+//Selectable
+$("#selectable").selectable();
+
+//Resizable
+$("#resizable").resizable();
+</script>
+</html>
+
